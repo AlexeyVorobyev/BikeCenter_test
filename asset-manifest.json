@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/BikeCenter_test/static/css/main.d232a2f8.css",
-    "main.js": "/BikeCenter_test/static/js/main.81cf7b98.js",
-    "static/media/apple.svg": "/BikeCenter_test/static/media/apple.09ef3a303201a634a479f14ebe3c4f7b.svg",
-    "static/media/google.svg": "/BikeCenter_test/static/media/google.c5b97de66a0e89e05183670eb6278dcc.svg",
-    "static/media/tiktok.svg": "/BikeCenter_test/static/media/tiktok.9af88d3ed2dbe50345dbb115264cd438.svg",
-    "static/media/vkontakte.svg": "/BikeCenter_test/static/media/vkontakte.a9fe5f6561f397a1d09ac1ea7e1bff71.svg",
-    "static/media/logo.svg": "/BikeCenter_test/static/media/logo.800d48483b387235d16e6fd6374a2bf8.svg",
-    "static/media/whatsapp.svg": "/BikeCenter_test/static/media/whatsapp.e0b6f01ddcea1062aadb778c31d29b2e.svg",
-    "static/media/orders.svg": "/BikeCenter_test/static/media/orders.7c50c2947e7181d3690fbed13e2fabba.svg",
-    "static/media/shoppingCart.svg": "/BikeCenter_test/static/media/shoppingCart.9f0a0d015dc14492d1f32de9fe9c1c47.svg",
-    "static/media/youtube.svg": "/BikeCenter_test/static/media/youtube.d952da36dee8bfd4c27f4271b229fbce.svg",
-    "static/media/favorites.svg": "/BikeCenter_test/static/media/favorites.1cb3010b187911ebeec22070afd8a7c2.svg",
-    "static/media/telegram.svg": "/BikeCenter_test/static/media/telegram.1b691b3ccc6b87ce5d591d396f472c3c.svg",
-    "index.html": "/BikeCenter_test/index.html",
-    "static/media/person.svg": "/BikeCenter_test/static/media/person.efc842dc0bb36d00cad8cf499843f9de.svg",
-    "static/media/comparison.svg": "/BikeCenter_test/static/media/comparison.2f1e0c7db011f7091f884d8e74b01598.svg",
-    "static/media/headerSecondInputButtonIcon.svg": "/BikeCenter_test/static/media/headerSecondInputButtonIcon.e9f11907916b355f43e95dd0e21b0d92.svg",
-    "static/media/headerCityIcon.svg": "/BikeCenter_test/static/media/headerCityIcon.e357d2249300a13c98e810af4f7e0aa1.svg",
-    "static/media/headerSecondButtonIcon.svg": "/BikeCenter_test/static/media/headerSecondButtonIcon.78b236a2673bd0e84bd2cfdab074a1c1.svg",
-    "main.d232a2f8.css.map": "/BikeCenter_test/static/css/main.d232a2f8.css.map",
-    "main.81cf7b98.js.map": "/BikeCenter_test/static/js/main.81cf7b98.js.map"
+    "main.css": "/static/css/main.d232a2f8.css",
+    "main.js": "/static/js/main.8ef57a42.js",
+    "static/media/apple.svg": "/static/media/apple.09ef3a303201a634a479f14ebe3c4f7b.svg",
+    "static/media/google.svg": "/static/media/google.c5b97de66a0e89e05183670eb6278dcc.svg",
+    "static/media/tiktok.svg": "/static/media/tiktok.9af88d3ed2dbe50345dbb115264cd438.svg",
+    "static/media/vkontakte.svg": "/static/media/vkontakte.a9fe5f6561f397a1d09ac1ea7e1bff71.svg",
+    "static/media/logo.svg": "/static/media/logo.800d48483b387235d16e6fd6374a2bf8.svg",
+    "static/media/whatsapp.svg": "/static/media/whatsapp.e0b6f01ddcea1062aadb778c31d29b2e.svg",
+    "static/media/orders.svg": "/static/media/orders.7c50c2947e7181d3690fbed13e2fabba.svg",
+    "static/media/shoppingCart.svg": "/static/media/shoppingCart.9f0a0d015dc14492d1f32de9fe9c1c47.svg",
+    "static/media/youtube.svg": "/static/media/youtube.d952da36dee8bfd4c27f4271b229fbce.svg",
+    "static/media/favorites.svg": "/static/media/favorites.1cb3010b187911ebeec22070afd8a7c2.svg",
+    "static/media/telegram.svg": "/static/media/telegram.1b691b3ccc6b87ce5d591d396f472c3c.svg",
+    "static/media/person.svg": "/static/media/person.efc842dc0bb36d00cad8cf499843f9de.svg",
+    "index.html": "/index.html",
+    "static/media/comparison.svg": "/static/media/comparison.2f1e0c7db011f7091f884d8e74b01598.svg",
+    "static/media/headerSecondInputButtonIcon.svg": "/static/media/headerSecondInputButtonIcon.e9f11907916b355f43e95dd0e21b0d92.svg",
+    "static/media/headerCityIcon.svg": "/static/media/headerCityIcon.e357d2249300a13c98e810af4f7e0aa1.svg",
+    "static/media/headerSecondButtonIcon.svg": "/static/media/headerSecondButtonIcon.78b236a2673bd0e84bd2cfdab074a1c1.svg",
+    "main.d232a2f8.css.map": "/static/css/main.d232a2f8.css.map",
+    "main.8ef57a42.js.map": "/static/js/main.8ef57a42.js.map"
   },
   "entrypoints": [
     "static/css/main.d232a2f8.css",
-    "static/js/main.81cf7b98.js"
+    "static/js/main.8ef57a42.js"
   ]
 }
