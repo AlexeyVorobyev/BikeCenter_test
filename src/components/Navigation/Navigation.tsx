@@ -11,6 +11,9 @@ import {ReactComponent as ShoppingCartSvg} from './assets/headerSecondNavIcons/s
 import {ReactComponent as PersonSvg} from './assets/headerSecondNavIcons/person.svg';
 import {ReactComponent as WhatsappSvg} from './assets/socialNetworksIcons/whatsapp.svg';
 import {ReactComponent as TelegramSvg} from './assets/socialNetworksIcons/telegram.svg';
+import {ReactComponent as VKontakteSvg} from './assets/socialNetworksIcons/vkontakte.svg';
+import {ReactComponent as YouTubeSvg} from './assets/socialNetworksIcons/youtube.svg';
+import {ReactComponent as TikTokSvg} from './assets/socialNetworksIcons/tiktok.svg';
 import QrCodePng from './assets/toDownload/qrcode.png'
 import {ReactComponent as GoogleSvg} from './assets/toDownload/google.svg';
 import {ReactComponent as AppleSvg} from './assets/toDownload/apple.svg';
@@ -211,6 +214,7 @@ const Navigation = () => {
             <footer className={styles.footer}>
                 <div className={styles.footerWrapper}>
                     <div className={styles.footerGrid}>
+
                         <div className={styles.gridElemInfo}>
                             <h3 className={styles.infoTitle}>Помощь</h3>
                             <nav className={styles.questionsContainer}>
@@ -236,6 +240,7 @@ const Navigation = () => {
                                 >Бонусная программа</NavLink>
                             </nav>
                         </div>
+
                         <div className={styles.gridElemInfo}>
                             <h3 className={styles.infoTitle}>О нас</h3>
                             <nav className={styles.questionsContainer}>
@@ -276,6 +281,7 @@ const Navigation = () => {
                                 >Контакты</NavLink>
                             </nav>
                         </div>
+
                         <div className={styles.gridElemInfo}>
                             <h3 className={styles.infoTitle}>Контакты</h3>
                             <div className={styles.contactsContainer}>
@@ -302,6 +308,7 @@ const Navigation = () => {
                                 <p className={styles.addressText}>ул. Российская, 131/5</p>
                             </div>
                         </div>
+
                         <div className={styles.gridElemInfo}>
                             <h4 className={styles.infoTitle}>Скачайте наше приложение</h4>
                             <div className={styles.gridLinks}>
@@ -314,7 +321,28 @@ const Navigation = () => {
                                 </a>
                             </div>
                         </div>
+
+                        <div className={styles.socialNetworksContainer}>
+                            <VKontakteSvg/>
+                            <YouTubeSvg/>
+                            <TikTokSvg/>
+                        </div>
+
+                        <div>
+                            <form className={styles.footerEmail}>
+                                <input className={styles.emailInput} type={"email"} pattern={"/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/"} placeholder={"Введите свой email"}/>
+                                <button className={styles.subscriptButton}>
+                                    <p className={styles.subscriptButtonText}>Подписаться</p>
+                                </button>
+                            </form>
+                        </div>
                     </div>
+                </div>
+            </footer>
+            <footer className={styles.footerSecond}>
+                <div className={styles.footerSecondWrapper}>
+                    <p className={styles.footerCopyRight}>© 2022</p>
+                    <p className={styles.footerCopyRight}>Сеть магазинов "Байк Центр" ® — bike-сentre.ru</p>
                 </div>
             </footer>
         </>
