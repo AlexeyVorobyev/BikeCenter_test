@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BikeCenter_test/static/css/main.d232a2f8.css",
-    "main.js": "/BikeCenter_test/static/js/main.a6d3744a.js",
+    "main.js": "/BikeCenter_test/static/js/main.9bab6ae7.js",
     "static/media/apple.svg": "/BikeCenter_test/static/media/apple.09ef3a303201a634a479f14ebe3c4f7b.svg",
     "static/media/google.svg": "/BikeCenter_test/static/media/google.c5b97de66a0e89e05183670eb6278dcc.svg",
     "static/media/tiktok.svg": "/BikeCenter_test/static/media/tiktok.9af88d3ed2dbe50345dbb115264cd438.svg",
@@ -20,10 +20,10 @@
     "static/media/headerCityIcon.svg": "/BikeCenter_test/static/media/headerCityIcon.e357d2249300a13c98e810af4f7e0aa1.svg",
     "static/media/headerSecondButtonIcon.svg": "/BikeCenter_test/static/media/headerSecondButtonIcon.78b236a2673bd0e84bd2cfdab074a1c1.svg",
     "main.d232a2f8.css.map": "/BikeCenter_test/static/css/main.d232a2f8.css.map",
-    "main.a6d3744a.js.map": "/BikeCenter_test/static/js/main.a6d3744a.js.map"
+    "main.9bab6ae7.js.map": "/BikeCenter_test/static/js/main.9bab6ae7.js.map"
   },
   "entrypoints": [
     "static/css/main.d232a2f8.css",
-    "static/js/main.a6d3744a.js"
+    "static/js/main.9bab6ae7.js"
   ]
 }
