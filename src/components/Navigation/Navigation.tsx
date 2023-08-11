@@ -17,10 +17,15 @@ import {ReactComponent as TikTokSvg} from './assets/socialNetworksIcons/tiktok.s
 import QrCodePng from './assets/toDownload/qrcode.png'
 import {ReactComponent as GoogleSvg} from './assets/toDownload/google.svg';
 import {ReactComponent as AppleSvg} from './assets/toDownload/apple.svg';
+import {ReactComponent as SearchIconSvg} from './assets/searchDropDown/lupaSearch.svg';
+import {ReactComponent as ArrowLeftSearchIConSvg} from './assets/searchDropDown/arrow.svg';
 import {NavLink, Outlet} from "react-router-dom";
 import classNames from "classnames";
 
 const Navigation = () => {
+
+    const [isHideCatalogue,setHideCatalogue] = React.useState(true);
+    const [isHideSearch,setHideSearch] = React.useState(true);
 
     return (
         <>
@@ -100,10 +105,102 @@ const Navigation = () => {
                                 <p className={styles.headerSecondSearchButtonText}>Каталог</p>
                             </button>
                             <div className={styles.headerSecondSearch}>
-                                <input className={styles.headerSecondSearchInput} placeholder={"Поиск на сайте"}/>
+                                <input
+                                    className={styles.headerSecondSearchInput}
+                                    placeholder={"Поиск на сайте"}
+                                    onBlur={() => setHideSearch(true)}
+                                    onFocus={() => setHideSearch(false)}
+                                />
                                 <button className={styles.headerSecondSearchInputButton}>
                                     <HeaderSecondInputButtonIconSvg className={styles.headerSecondSearchInputButtonSvg}/>
                                 </button>
+
+                                <div className={classNames(styles.searchDropDownContainer,isHideSearch ? styles.dropDownHidden : styles.dropDownShow)}>
+                                    <div className={styles.searchDropDownScrollBox}>
+                                        <div className={styles.searchGroupContainer}>
+                                            <h3 className={styles.searchGroupTitle}>Велосипеды</h3>
+                                            <div className={styles.searchGroupElems}>
+                                                <div className={styles.searchGroupElem}>
+                                                    <SearchIconSvg/>
+                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
+                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <SearchIconSvg/>
+                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
+                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <SearchIconSvg/>
+                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
+                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <SearchIconSvg/>
+                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
+                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <SearchIconSvg/>
+                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
+                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className={styles.searchGroupContainer}>
+                                            <h3 className={styles.searchGroupTitle}>Все разделы</h3>
+                                            <div className={styles.searchGroupElems}>
+                                                <div className={styles.searchGroupElem}>
+                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
+                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
+                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
+                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className={styles.searchGroupContainer}>
+                                            <div className={styles.searchGroupElems}>
+                                                <div className={styles.searchGroupElem}>
+                                                    <div className={styles.searchGroupRectangle}></div>
+                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
+                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <div className={styles.searchGroupRectangle}></div>
+                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
+                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <div className={styles.searchGroupRectangle}></div>
+                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
+                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <div className={styles.searchGroupRectangle}></div>
+                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
+                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
+                                                </div>
+                                                <div className={styles.searchGroupElem}>
+                                                    <div className={styles.searchGroupRectangle}></div>
+                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
+                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={styles.searchDropDownFooter}>
+                                        <button className={styles.searchDropDownFooterButton}>
+                                            <p className={styles.searchDropDownFooterButton}>Все результаты</p>
+                                        </button>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <nav className={styles.headerSecondNavigationContainer}>
@@ -221,22 +318,22 @@ const Navigation = () => {
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Как оплатить?</NavLink>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Как получить?</NavLink>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Пользовательское соглашение</NavLink>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Бонусная программа</NavLink>
                             </nav>
                         </div>
@@ -247,37 +344,37 @@ const Navigation = () => {
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Ремонт и обслуживание</NavLink>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Прокат оборудывания</NavLink>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Наша история</NavLink>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Мероприятия от байк центра</NavLink>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Арендодателям</NavLink>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Вакансии</NavLink>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Контакты</NavLink>
                             </nav>
                         </div>
@@ -328,8 +425,9 @@ const Navigation = () => {
                             <TikTokSvg/>
                         </div>
 
-                        <div>
-                            <form className={styles.footerEmail}>
+                        <div className={styles.footerFormContainer}>
+                            <h3 className={styles.footerFormTitle}>Узнавай о скидках первым</h3>
+                            <form className={styles.footerForm}>
                                 <input className={styles.emailInput} type={"email"} pattern={"/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/"} placeholder={"Введите свой email"}/>
                                 <button className={styles.subscriptButton}>
                                     <p className={styles.subscriptButtonText}>Подписаться</p>
