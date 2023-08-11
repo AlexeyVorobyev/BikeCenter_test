@@ -1,7 +1,12 @@
 {
   "files": {
-    "main.css": "/BikeCenter_test/static/css/main.d232a2f8.css",
-    "main.js": "/BikeCenter_test/static/js/main.9bab6ae7.js",
+    "main.css": "/BikeCenter_test/static/css/main.84fad42b.css",
+    "main.js": "/BikeCenter_test/static/js/main.156eb072.js",
+    "static/media/gears.svg": "/BikeCenter_test/static/media/gears.fe52c583e1e3bd0a9034dffe218f9d67.svg",
+    "static/media/car.png": "/BikeCenter_test/static/media/car.bad7a66a4ee89e4fe9bc.png",
+    "static/media/boxes.png": "/BikeCenter_test/static/media/boxes.3c8b52013598b5abd5e9.png",
+    "static/media/money.png": "/BikeCenter_test/static/media/money.13fa1c9f5ec2bf9bf43e.png",
+    "static/media/coin2.png": "/BikeCenter_test/static/media/coin2.0811893cd3bafda02b39.png",
     "static/media/apple.svg": "/BikeCenter_test/static/media/apple.09ef3a303201a634a479f14ebe3c4f7b.svg",
     "static/media/google.svg": "/BikeCenter_test/static/media/google.c5b97de66a0e89e05183670eb6278dcc.svg",
     "static/media/tiktok.svg": "/BikeCenter_test/static/media/tiktok.9af88d3ed2dbe50345dbb115264cd438.svg",
@@ -15,15 +20,18 @@
     "static/media/telegram.svg": "/BikeCenter_test/static/media/telegram.1b691b3ccc6b87ce5d591d396f472c3c.svg",
     "index.html": "/BikeCenter_test/index.html",
     "static/media/person.svg": "/BikeCenter_test/static/media/person.efc842dc0bb36d00cad8cf499843f9de.svg",
+    "static/media/electricity.svg": "/BikeCenter_test/static/media/electricity.b30fabbce791af2d6f7639b42c7b6085.svg",
+    "static/media/lupaSearch.svg": "/BikeCenter_test/static/media/lupaSearch.d59808b1be0c171e1f3b550ddee5cf23.svg",
     "static/media/comparison.svg": "/BikeCenter_test/static/media/comparison.2f1e0c7db011f7091f884d8e74b01598.svg",
     "static/media/headerSecondInputButtonIcon.svg": "/BikeCenter_test/static/media/headerSecondInputButtonIcon.e9f11907916b355f43e95dd0e21b0d92.svg",
     "static/media/headerCityIcon.svg": "/BikeCenter_test/static/media/headerCityIcon.e357d2249300a13c98e810af4f7e0aa1.svg",
+    "static/media/arrow.svg": "/BikeCenter_test/static/media/arrow.30c643090140c9a3f73a3dfe806893b9.svg",
     "static/media/headerSecondButtonIcon.svg": "/BikeCenter_test/static/media/headerSecondButtonIcon.78b236a2673bd0e84bd2cfdab074a1c1.svg",
-    "main.d232a2f8.css.map": "/BikeCenter_test/static/css/main.d232a2f8.css.map",
-    "main.9bab6ae7.js.map": "/BikeCenter_test/static/js/main.9bab6ae7.js.map"
+    "main.84fad42b.css.map": "/BikeCenter_test/static/css/main.84fad42b.css.map",
+    "main.156eb072.js.map": "/BikeCenter_test/static/js/main.156eb072.js.map"
   },
   "entrypoints": [
-    "static/css/main.d232a2f8.css",
-    "static/js/main.9bab6ae7.js"
+    "static/css/main.84fad42b.css",
+    "static/js/main.156eb072.js"
   ]
 }
