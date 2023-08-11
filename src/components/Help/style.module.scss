@@ -52,6 +52,10 @@
   margin-top: 50px;
   //4x3
 
+  .helpNavLink {
+    text-decoration: none;
+  }
+
   .helpGridElem {
     border-radius: 20px;
     background: linear-gradient(90deg, #E2E6EB 0%, #F3F1F5 69.93%);
