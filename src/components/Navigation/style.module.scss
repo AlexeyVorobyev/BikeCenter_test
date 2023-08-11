@@ -122,6 +122,8 @@
   top:0;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
   padding:10px 0 6px 0;
+  background: #FFFFFF;
+  z-index: 1000;
 
   .headerSecondWrapper {
     display: flex;
@@ -145,6 +147,7 @@
         margin-left:85px;
         gap:16px;
         margin-right: 85px;
+        width: 100%;
 
         .headerSecondSearchButton {
           border-radius: 10px;
@@ -166,13 +169,15 @@
         }
 
         .headerSecondSearch {
+          position: relative;
           display: flex;
           align-items: center;
-          min-width: 635px;
+          max-width: 635px;
           height: 40px;
           border-radius: 10px;
           background: #E0E0E0;
           justify-content: space-between;
+          width: 100%;
 
           .headerSecondSearchInput {
             color: #828282;
@@ -203,6 +208,208 @@
             display: flex;
             justify-content: center;
           }
+
+          .dropDownHidden {
+            opacity: 0.75;
+            max-height: 0;
+            visibility: hidden;
+          }
+
+          .dropDownShow {
+            opacity: 1;
+            max-height: 70vh;
+            visibility: visible;
+          }
+
+          .searchDropDownContainer {
+            display: flex;
+            position: absolute;
+            top:50px;
+            left:0;
+            transition: all 1s ease-in-out;
+            border-radius: 10px;
+            background-color: #FFF;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+            box-sizing: border-box;
+            width: 100%;
+            flex-direction: column;
+            overflow: hidden;
+
+            .searchDropDownScrollBox {
+              margin-top: 35px;
+              overflow-y: scroll;
+              margin-right: 2px;
+              padding-bottom: 10px;
+
+              &::-webkit-scrollbar {
+                width: 3px;
+                background-color: #E0E0E0;
+              }
+
+              /* ползунок скроллбара */
+              &::-webkit-scrollbar-thumb {
+                background-color: #999;
+                border-radius: 9em;
+              }
+
+              ::-webkit-scrollbar-thumb:hover {
+                background-color: white;
+              }
+            }
+
+            .searchGroupContainer:nth-child(1) {
+              margin-top: 0;
+              .searchGroupElems {
+                margin-top: 16px;
+
+                .searchGroupElem {
+                  padding-bottom: 14px;
+                  border-bottom: 1px solid #ECECEC;
+
+                  .searchGroupArrowSvg {
+                    margin-left: auto;
+                  }
+
+                  .searchGroupElemText {
+                    margin-left: 10px;
+                    color: #333;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                  }
+                }
+
+              }
+            }
+
+            .searchGroupContainer:nth-child(2) {
+              .searchGroupElems {
+                margin-top: 16px;
+
+                .searchGroupElem {
+                  padding-bottom: 14px;
+                  border-bottom: 1px solid #ECECEC;
+
+                  .searchGroupArrowSvg {
+                    margin-left: auto;
+                  }
+
+                  .searchGroupElemText {
+                    color: #333;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                  }
+                }
+              }
+            }
+
+            .searchGroupContainer:nth-child(3) {
+
+              .searchGroupElems {
+
+                .searchGroupElem:last-child {
+                  border: none;
+                }
+
+                .searchGroupElem {
+                  padding-left: 35px;
+                  box-sizing: border-box;
+                  width: calc(100% + 35px);
+                  position: relative;
+                  left:-35px;
+                  padding-bottom: 8px;
+                  border-bottom: 1px solid #ECECEC;
+
+                  .searchGroupArrowSvg {
+                    margin-left: auto;
+                  }
+
+                  .searchGroupRectangle {
+                    width: 52px;
+                    height: 50px;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    background-color: #F2F3F5;
+                  }
+
+                  .searchGroupElemText {
+                    color: #333;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    max-width: 250px;
+                    margin-left: 16px;
+                  }
+
+                  .searchGroupElemPrice {
+                    margin-left: auto;
+                    color: #333;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 0.32px;
+                  }
+                }
+              }
+            }
+
+            .searchGroupContainer {
+              padding: 0 35px 0 35px;
+              margin-top: 35px;
+
+              .searchGroupTitle {
+                color: #333;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+              }
+
+              .searchGroupElems {
+                display: flex;
+                flex-direction: column;
+                gap:16px;
+
+                .searchGroupElem {
+                  display: flex;
+                  align-items: center;
+
+                }
+              }
+            }
+
+            .searchDropDownFooter {
+              padding: 15px 0 15px 0;
+              background-color: #F2F3F5;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .searchDropDownFooterButton {
+                width: 272.992px;
+                height: 48px;
+                border-radius: 10px;
+                background: #0C1111;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .searchDropDownFooterButton {
+                  color: #FFF;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+              }
+            }
+          }
+
         }
       }
 
@@ -339,8 +546,9 @@
 }
 
 .footer {
-  padding: 75px 0 22px 0;
+  padding: 75px 0 50px 0;
   background-color: #0C1111;
+  border-bottom: 1px solid #333;
 
   .footerWrapper {
     display: flex;
@@ -349,5 +557,264 @@
     box-sizing: border-box;
     padding: 0 120px 0 120px;
     margin: auto;
+
+    .footerGrid {
+      display: grid;
+      grid-column-gap: 130px;
+      grid-row-gap: 10px;
+      padding-right: 130px;
+
+      .footerFormContainer {
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+
+      .socialNetworksContainer {
+        grid-column: 4/5;
+        grid-row: 2/3;
+        display: flex;
+        width:fit-content;
+        height: fit-content;
+        gap:10px;
+        justify-self: end;
+        align-self: end;
+      }
+
+      .gridElemInfo:nth-child(1) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+
+      .gridElemInfo:nth-child(2) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
+      .gridElemInfo:nth-child(3) {
+        grid-column: 3/4;
+        grid-row: 1/3;
+      }
+
+      .gridElemInfo:nth-child(4) {
+        grid-column: 4/5;
+        grid-row: 1/2;
+
+        .infoTitle {
+          color: #FFF;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 2;
+        }
+
+        .gridLinks {
+          display: grid;
+          column-gap: 20px;
+          row-gap: 16px;
+          margin-top: 33px;
+
+          .qrCodePng {
+            grid-column: 1/2;
+            grid-row: 1/3;
+            width: 114px;
+            height: 114px;
+            flex-shrink: 0;
+            border-radius: 10px;
+          }
+
+          .link {
+            padding: 0 20px 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 49px;
+            border-radius: 7px;
+            background: #333;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          .link:nth-child(2) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+          }
+
+          .link:nth-child(1) {
+            grid-column: 2/3;
+            grid-row: 2/3;
+          }
+        }
+      }
+
+      .gridElemInfo {
+
+        .infoTitle {
+          color: #FFF;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .contactsContainer {
+          margin-top:28px;
+
+          .phonesContainer {
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+            color: #FFFFFF;
+          }
+
+          .socialNetworksContainer {
+            margin-top: 18px;
+            display: flex;
+            flex-direction: column;
+
+            .socialNetworkLink {
+              display: flex;
+              gap:12px;
+              align-items: center;
+
+              .socialNetworkLinkText {
+                color: #F2F2F2;
+                font-family: Open Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.32px;
+              }
+            }
+          }
+        }
+
+        .infoAddressesTitle {
+          color: #FFF;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 22px;
+        }
+
+        .addressesContainer {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+
+          .addressText {
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px
+          }
+        }
+
+        .questionsContainer {
+          margin-top: 28px;
+          display: flex;
+          flex-direction: column;
+
+          .footerNavLink {
+            text-decoration: none;
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+          }
+        }
+      }
+
+      .footerFormContainer {
+
+        display: flex;
+        flex-direction: column;
+
+        .footerFormTitle {
+          color: #FFF;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .footerForm {
+          display: flex;
+          margin-top: 17px;
+          border-radius: 7px;
+          background: #4F4F4F;
+          height: 46px;
+
+          .subscriptButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            height: 46px;
+            flex-shrink: 0;
+            border-radius: 7px;
+            background: #333;
+
+            .subscriptButtonText {
+              color: #FFF;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px;
+            }
+          }
+
+          .emailInput {
+            width:100%;
+            background: none;
+            padding: 0 38px 0 38px;
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+
+            &::placeholder {
+              color: #FFF;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footerSecond {
+  padding: 16px 0 16px 0;
+  background-color: #0C1111;
+  border-bottom: 1px solid #333;
+
+  .footerSecondWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    box-sizing: border-box;
+    padding: 0 120px 0 120px;
+    margin: auto;
+
+    .footerCopyRight {
+      color: #828282;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
   }
 }

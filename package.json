@@ -1,5 +1,5 @@
 {
-  "name": "react_template_minimal",
+  "name": "BikeCenter_test",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.tsx",
@@ -33,7 +33,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "start": "concurrently npm:dev",
     "dev": "react-scripts start",
