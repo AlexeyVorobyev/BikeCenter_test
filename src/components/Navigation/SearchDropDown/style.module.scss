@@ -1,0 +1,200 @@
+.dropDownHidden {
+  opacity: 0.75;
+  max-height: 0;
+  visibility: hidden;
+}
+
+.dropDownShow {
+  opacity: 1;
+  max-height: 70vh;
+  visibility: visible;
+}
+
+.searchDropDownContainer {
+  display: flex;
+  position: absolute;
+  top:50px;
+  left:0;
+  transition: all 1s ease-in-out;
+  border-radius: 10px;
+  background-color: #FFF;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+
+  .searchDropDownScrollBox {
+    margin-top: 35px;
+    overflow-y: scroll;
+    margin-right: 2px;
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      background-color: #E0E0E0;
+    }
+
+    /* ползунок скроллбара */
+    &::-webkit-scrollbar-thumb {
+      background-color: #999;
+      border-radius: 9em;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: white;
+    }
+  }
+
+  .searchGroupContainer:nth-child(1) {
+    margin-top: 0;
+    .searchGroupElems {
+      margin-top: 16px;
+
+      .searchGroupElem {
+        padding-bottom: 14px;
+        border-bottom: 1px solid #ECECEC;
+
+        .searchGroupArrowSvg {
+          margin-left: auto;
+        }
+
+        .searchGroupElemText {
+          margin-left: 10px;
+          color: #333;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+    }
+  }
+
+  .searchGroupContainer:nth-child(2) {
+    .searchGroupElems {
+      margin-top: 16px;
+
+      .searchGroupElem {
+        padding-bottom: 14px;
+        border-bottom: 1px solid #ECECEC;
+
+        .searchGroupArrowSvg {
+          margin-left: auto;
+        }
+
+        .searchGroupElemText {
+          color: #333;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+
+  .searchGroupContainer:nth-child(3) {
+
+    .searchGroupElems {
+
+      .searchGroupElem:last-child {
+        border: none;
+      }
+
+      .searchGroupElem {
+        padding-left: 35px;
+        box-sizing: border-box;
+        width: calc(100% + 35px);
+        position: relative;
+        left:-35px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ECECEC;
+
+        .searchGroupArrowSvg {
+          margin-left: auto;
+        }
+
+        .searchGroupRectangle {
+          width: 52px;
+          height: 50px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          background-color: #F2F3F5;
+        }
+
+        .searchGroupElemText {
+          color: #333;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          max-width: 250px;
+          margin-left: 16px;
+        }
+
+        .searchGroupElemPrice {
+          margin-left: auto;
+          color: #333;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.32px;
+        }
+      }
+    }
+  }
+
+  .searchGroupContainer {
+    padding: 0 35px 0 35px;
+    margin-top: 35px;
+
+    .searchGroupTitle {
+      color: #333;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .searchGroupElems {
+      display: flex;
+      flex-direction: column;
+      gap:16px;
+
+      .searchGroupElem {
+        display: flex;
+        align-items: center;
+
+      }
+    }
+  }
+
+  .searchDropDownFooter {
+    padding: 15px 0 15px 0;
+    background-color: #F2F3F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .searchDropDownFooterButton {
+      width: 272.992px;
+      height: 48px;
+      border-radius: 10px;
+      background: #0C1111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .searchDropDownFooterButton {
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}

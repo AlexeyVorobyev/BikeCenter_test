@@ -1,0 +1,196 @@
+$maxCatalogueHeight : 70vh;
+
+.catalogueHidden {
+  opacity: 0.75;
+  max-height: 0;
+  visibility: hidden;
+}
+
+.catalogueShow {
+  opacity: 1;
+  max-height: $maxCatalogueHeight;
+  visibility: visible;
+}
+
+.catalogue {
+  position: absolute;
+  background: #FFF;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.08);
+  width: 100%;
+  z-index: 300;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+
+  .catalogueWrapper {
+    display: grid;
+    grid-template-columns: 335px 1fr 150px;
+    gap: 40px;
+    max-width: 1920px;
+    box-sizing: border-box;
+    padding: 40px 120px 40px 120px;
+    max-height: $maxCatalogueHeight;
+    margin: auto;
+
+    .catalogueDetailedMenuFlex {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-height: calc(#{$maxCatalogueHeight} - 80px);
+      row-gap: 15px;
+      column-gap:100px;
+
+      .catalogueDetailedMenuItem {
+        .itemTitleWrapper {
+          display: flex;
+          gap:60px;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #F5F5F5;
+          padding-bottom: 5px;
+
+          .itemImageContainer {
+            width: 52.188px;
+            height: 40px;
+            border-radius: 7px;
+            background: #F2F3F5;
+          }
+
+          .itemTitle {
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+          }
+        }
+
+        .subItemsContainer {
+          margin-top: 8px;
+          display: flex;
+          flex-direction: column;
+          gap:10px;
+
+          .subItem {
+            color: #333;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .catalogueImages {
+      direction: rtl;
+      display: flex;
+      flex-direction: column;
+      max-height: calc(#{$maxCatalogueHeight} - 80px);
+      gap: 26px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+        background-color: #E0E0E0;
+      }
+
+      /* ползунок скроллбара */
+      &::-webkit-scrollbar-thumb {
+        background-color: #999;
+        border-radius: 9em;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: white;
+      }
+
+      .catalogueImage {
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+        background: #F2F3F5;
+        flex-shrink: 0;
+      }
+    }
+
+    .catalogueMenu {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      max-height: calc(#{$maxCatalogueHeight} - 80px);
+      padding-right: 20px;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+        background-color: #E0E0E0;
+      }
+
+      /* ползунок скроллбара */
+      &::-webkit-scrollbar-thumb {
+        background-color: #999;
+        border-radius: 9em;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: white;
+      }
+
+      .activeCatalogueMenuItem {
+        background: #F2F3F5;
+      }
+
+      .catalogueMenuItem {
+        display: flex;
+        padding: 7px 20px 7px 4px;
+        align-items: center;
+        border-radius: 5px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .itemArrowSvg {
+          margin-left: auto;
+        }
+
+
+        .itemTitleService {
+          color: #000;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .itemTitleItem {
+          color: #333;
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        .activeTitleItem {
+          color: #EA5455;
+        }
+
+        .itemTitle {
+          font-style: normal;
+          line-height: 20px;
+          margin-left:20px;
+          max-width:200px;
+        }
+
+        .itemImageContainer {
+          width: 40px;
+          height: 40px;
+          border-radius: 7px;
+          background: #F2F3F5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .itemImage {
+            width: 35px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

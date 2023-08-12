@@ -9,18 +9,11 @@ import {ReactComponent as ComparisonSvg} from './assets/headerSecondNavIcons/com
 import {ReactComponent as FavoritesSvg} from './assets/headerSecondNavIcons/favorites.svg';
 import {ReactComponent as ShoppingCartSvg} from './assets/headerSecondNavIcons/shoppingCart.svg';
 import {ReactComponent as PersonSvg} from './assets/headerSecondNavIcons/person.svg';
-import {ReactComponent as WhatsappSvg} from './assets/socialNetworksIcons/whatsapp.svg';
-import {ReactComponent as TelegramSvg} from './assets/socialNetworksIcons/telegram.svg';
-import {ReactComponent as VKontakteSvg} from './assets/socialNetworksIcons/vkontakte.svg';
-import {ReactComponent as YouTubeSvg} from './assets/socialNetworksIcons/youtube.svg';
-import {ReactComponent as TikTokSvg} from './assets/socialNetworksIcons/tiktok.svg';
-import QrCodePng from './assets/toDownload/qrcode.png'
-import {ReactComponent as GoogleSvg} from './assets/toDownload/google.svg';
-import {ReactComponent as AppleSvg} from './assets/toDownload/apple.svg';
-import {ReactComponent as SearchIconSvg} from './assets/searchDropDown/lupaSearch.svg';
-import {ReactComponent as ArrowLeftSearchIConSvg} from './assets/searchDropDown/arrow.svg';
 import {NavLink, Outlet} from "react-router-dom";
 import classNames from "classnames";
+import {Footer} from "./Footer/Footer";
+import {SearchDropDown} from "./SearchDropDown/SearchDropDown";
+import {Catalogue} from "./Catalogue/Catalogue";
 
 const Navigation = () => {
 
@@ -28,7 +21,7 @@ const Navigation = () => {
     const [isHideSearch,setHideSearch] = React.useState(true);
 
     return (
-        <>
+        <div>
             <header className={styles.header}>
                 <div className={styles.headerWrapper}>
                     <div className={styles.headerInfoContainer}>
@@ -95,211 +88,140 @@ const Navigation = () => {
                 </div>
             </header>
 
-            <header className={classNames(styles.headerSecond)}>
-                <div className={styles.headerSecondWrapper}>
-                    <div className={styles.headerSecondContainer}>
-                        <HeaderLogo className={styles.headerSecondLogoSvg}/>
-                        <div className={styles.headerSecondSearchWrapper}>
-                            <button className={styles.headerSecondSearchButton}>
-                                <HeaderSecondButtonIconSvg className={styles.headerSecondSearchButtonSvg}/>
-                                <p className={styles.headerSecondSearchButtonText}>Каталог</p>
-                            </button>
-                            <div className={styles.headerSecondSearch}>
-                                <input
-                                    className={styles.headerSecondSearchInput}
-                                    placeholder={"Поиск на сайте"}
-                                    onBlur={() => setHideSearch(true)}
-                                    onFocus={() => setHideSearch(false)}
-                                />
-                                <button className={styles.headerSecondSearchInputButton}>
-                                    <HeaderSecondInputButtonIconSvg className={styles.headerSecondSearchInputButtonSvg}/>
+            <header className={styles.headerSecond}>
+                <div className={styles.headerSecondOuterWrapper}>
+                    <div className={styles.headerSecondWrapper}>
+                        <div className={styles.headerSecondContainer}>
+                            <HeaderLogo className={styles.headerSecondLogoSvg}/>
+                            <div className={styles.headerSecondSearchWrapper}>
+                                <button
+                                    className={styles.headerSecondSearchButton}
+                                    onClick={() => {
+                                        setHideCatalogue(!isHideCatalogue)
+                                        if (document.body.style.overflowY === "hidden") {
+                                            document.body.style.overflowY = "visible";
+                                        }
+                                        else document.body.style.overflowY = "hidden";
+                                    }}
+                                >
+                                    <HeaderSecondButtonIconSvg className={styles.headerSecondSearchButtonSvg}/>
+                                    <p className={styles.headerSecondSearchButtonText}>Каталог</p>
                                 </button>
+                                <div className={styles.headerSecondSearch}>
+                                    <input
+                                        className={styles.headerSecondSearchInput}
+                                        placeholder={"Поиск на сайте"}
+                                        onBlur={() => setHideSearch(true)}
+                                        onFocus={() => setHideSearch(false)}
+                                    />
+                                    <button className={styles.headerSecondSearchInputButton}>
+                                        <HeaderSecondInputButtonIconSvg className={styles.headerSecondSearchInputButtonSvg}/>
+                                    </button>
 
-                                <div className={classNames(styles.searchDropDownContainer,isHideSearch ? styles.dropDownHidden : styles.dropDownShow)}>
-                                    <div className={styles.searchDropDownScrollBox}>
-                                        <div className={styles.searchGroupContainer}>
-                                            <h3 className={styles.searchGroupTitle}>Велосипеды</h3>
-                                            <div className={styles.searchGroupElems}>
-                                                <div className={styles.searchGroupElem}>
-                                                    <SearchIconSvg/>
-                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
-                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <SearchIconSvg/>
-                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
-                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <SearchIconSvg/>
-                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
-                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <SearchIconSvg/>
-                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
-                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <SearchIconSvg/>
-                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
-                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className={styles.searchGroupContainer}>
-                                            <h3 className={styles.searchGroupTitle}>Все разделы</h3>
-                                            <div className={styles.searchGroupElems}>
-                                                <div className={styles.searchGroupElem}>
-                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
-                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
-                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <p className={styles.searchGroupElemText}>Электровелосипеды</p>
-                                                    <ArrowLeftSearchIConSvg className={styles.searchGroupArrowSvg}/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className={styles.searchGroupContainer}>
-                                            <div className={styles.searchGroupElems}>
-                                                <div className={styles.searchGroupElem}>
-                                                    <div className={styles.searchGroupRectangle}></div>
-                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
-                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <div className={styles.searchGroupRectangle}></div>
-                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
-                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <div className={styles.searchGroupRectangle}></div>
-                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
-                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <div className={styles.searchGroupRectangle}></div>
-                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
-                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
-                                                </div>
-                                                <div className={styles.searchGroupElem}>
-                                                    <div className={styles.searchGroupRectangle}></div>
-                                                    <p className={styles.searchGroupElemText}>Велосипед TECH TEAM Fox 20 (2021) черно-синий</p>
-                                                    <p className={styles.searchGroupElemPrice}>235 265 Р</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={styles.searchDropDownFooter}>
-                                        <button className={styles.searchDropDownFooterButton}>
-                                            <p className={styles.searchDropDownFooterButton}>Все результаты</p>
-                                        </button>
-                                    </div>
+                                    <SearchDropDown isHideSearch={isHideSearch}/>
                                 </div>
-
                             </div>
-                        </div>
-                        <nav className={styles.headerSecondNavigationContainer}>
-                            <NavLink
-                                to={"someRoute"}
-                                className={({ isActive }) =>
-                                    (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                            >
-                                <button className={styles.headerSecondNavLinkButton}>
-                                    <div className={styles.headerSecondNavLinkCircle}>
-                                        <PersonSvg className={styles.headerSecondNavLinkIconSvg}/>
-                                    </div>
-                                    <p className={styles.headerSecondNavLinkText}>Вход</p>
-                                </button>
-                            </NavLink>
-                            <div className={styles.headerSecondNavigationWrapper}>
+                            <nav className={styles.headerSecondNavigationContainer}>
                                 <NavLink
                                     to={"someRoute"}
                                     className={({ isActive }) =>
                                         (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
                                 >
-                                    <div className={styles.headerSecondNavLinkContainer}>
-                                        <OrdersSvg className={styles.headerSecondNavLinkIconSvg}/>
-                                        <p className={styles.headerSecondNavLinkText}>Заказы</p>
-                                    </div>
-                                </NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                                >
-                                    <div className={styles.headerSecondNavLinkContainer}>
-                                        <ComparisonSvg className={styles.headerSecondNavLinkIconSvg}/>
-                                        <p className={styles.headerSecondNavLinkText}>Сравнение</p>
-                                    </div>
-                                </NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                                >
-                                    <div className={styles.headerSecondNavLinkContainer}>
-                                        <FavoritesSvg className={styles.headerSecondNavLinkIconSvg}/>
-                                        <p className={styles.headerSecondNavLinkText}>Избранное</p>
-                                    </div>
-                                </NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                                >
-                                    <div className={styles.headerSecondNavLinkContainer}>
-                                        <ShoppingCartSvg className={styles.headerSecondNavLinkIconSvg}/>
-                                        <p className={styles.headerSecondNavLinkText}>Корзина</p>
-                                        <div className={styles.headerSecondShopAmountContainer}>
-                                            <p className={styles.headerSecondShopAmountText}>2</p>
+                                    <button className={styles.headerSecondNavLinkButton}>
+                                        <div className={styles.headerSecondNavLinkCircle}>
+                                            <PersonSvg className={styles.headerSecondNavLinkIconSvg}/>
                                         </div>
-                                    </div>
+                                        <p className={styles.headerSecondNavLinkText}>Вход</p>
+                                    </button>
                                 </NavLink>
-                            </div>
-                        </nav>
-                    </div>
-                    <div className={styles.headerSecondContainer}>
-                        <nav className={styles.headerSecondNavigationContainer}>
-                            <NavLink
-                                to={"someRoute"}
-                                className={({ isActive }) =>
-                                    (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                            >Горные велосипеды</NavLink>
-                            <NavLink
-                                to={"someRoute"}
-                                className={({ isActive }) =>
-                                    (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                            >Детские велосипеды</NavLink>
-                            <NavLink
-                                to={"someRoute"}
-                                className={({ isActive }) =>
-                                    (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                            >Детские Самокаты</NavLink>
-                            <NavLink
-                                to={"someRoute"}
-                                className={({ isActive }) =>
-                                    (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                            >Электросамокаты</NavLink>
-                        </nav>
-                        <nav className={styles.headerSecondNavigationContainer}>
-                            <NavLink
-                                to={"someRoute"}
-                                className={({ isActive }) =>
-                                    (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                            ><span>Распродажа</span></NavLink>
-                            <NavLink
-                                to={"someRoute"}
-                                className={({ isActive }) =>
-                                    (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                            >Бренды</NavLink>
-                        </nav>
+                                <div className={styles.headerSecondNavigationWrapper}>
+                                    <NavLink
+                                        to={"someRoute"}
+                                        className={({ isActive }) =>
+                                            (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                    >
+                                        <div className={styles.headerSecondNavLinkContainer}>
+                                            <OrdersSvg className={styles.headerSecondNavLinkIconSvg}/>
+                                            <p className={styles.headerSecondNavLinkText}>Заказы</p>
+                                        </div>
+                                    </NavLink>
+                                    <NavLink
+                                        to={"someRoute"}
+                                        className={({ isActive }) =>
+                                            (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                    >
+                                        <div className={styles.headerSecondNavLinkContainer}>
+                                            <ComparisonSvg className={styles.headerSecondNavLinkIconSvg}/>
+                                            <p className={styles.headerSecondNavLinkText}>Сравнение</p>
+                                        </div>
+                                    </NavLink>
+                                    <NavLink
+                                        to={"someRoute"}
+                                        className={({ isActive }) =>
+                                            (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                    >
+                                        <div className={styles.headerSecondNavLinkContainer}>
+                                            <FavoritesSvg className={styles.headerSecondNavLinkIconSvg}/>
+                                            <p className={styles.headerSecondNavLinkText}>Избранное</p>
+                                        </div>
+                                    </NavLink>
+                                    <NavLink
+                                        to={"someRoute"}
+                                        className={({ isActive }) =>
+                                            (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                    >
+                                        <div className={styles.headerSecondNavLinkContainer}>
+                                            <ShoppingCartSvg className={styles.headerSecondNavLinkIconSvg}/>
+                                            <p className={styles.headerSecondNavLinkText}>Корзина</p>
+                                            <div className={styles.headerSecondShopAmountContainer}>
+                                                <p className={styles.headerSecondShopAmountText}>2</p>
+                                            </div>
+                                        </div>
+                                    </NavLink>
+                                </div>
+                            </nav>
+                        </div>
+                        <div className={styles.headerSecondContainer}>
+                            <nav className={styles.headerSecondNavigationContainer}>
+                                <NavLink
+                                    to={"someRoute"}
+                                    className={({ isActive }) =>
+                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                >Горные велосипеды</NavLink>
+                                <NavLink
+                                    to={"someRoute"}
+                                    className={({ isActive }) =>
+                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                >Детские велосипеды</NavLink>
+                                <NavLink
+                                    to={"someRoute"}
+                                    className={({ isActive }) =>
+                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                >Детские Самокаты</NavLink>
+                                <NavLink
+                                    to={"someRoute"}
+                                    className={({ isActive }) =>
+                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                >Электросамокаты</NavLink>
+                            </nav>
+                            <nav className={styles.headerSecondNavigationContainer}>
+                                <NavLink
+                                    to={"someRoute"}
+                                    className={({ isActive }) =>
+                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                ><span>Распродажа</span></NavLink>
+                                <NavLink
+                                    to={"someRoute"}
+                                    className={({ isActive }) =>
+                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                >Бренды</NavLink>
+                            </nav>
+                        </div>
                     </div>
                 </div>
+
+                <Catalogue isHideCatalogue={isHideCatalogue}/>
+
             </header>
 
             <main className={styles.main}>
@@ -308,142 +230,8 @@ const Navigation = () => {
                 </div>
             </main>
 
-            <footer className={styles.footer}>
-                <div className={styles.footerWrapper}>
-                    <div className={styles.footerGrid}>
-
-                        <div className={styles.gridElemInfo}>
-                            <h3 className={styles.infoTitle}>Помощь</h3>
-                            <nav className={styles.questionsContainer}>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Как оплатить?</NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Как получить?</NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Пользовательское соглашение</NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Бонусная программа</NavLink>
-                            </nav>
-                        </div>
-
-                        <div className={styles.gridElemInfo}>
-                            <h3 className={styles.infoTitle}>О нас</h3>
-                            <nav className={styles.questionsContainer}>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Ремонт и обслуживание</NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Прокат оборудывания</NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Наша история</NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Мероприятия от байк центра</NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Арендодателям</NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Вакансии</NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
-                                >Контакты</NavLink>
-                            </nav>
-                        </div>
-
-                        <div className={styles.gridElemInfo}>
-                            <h3 className={styles.infoTitle}>Контакты</h3>
-                            <div className={styles.contactsContainer}>
-                                <div className={styles.phonesContainer}>
-                                    <p className={styles.phoneText}>8 (800) 500-03-20</p>
-                                    <p className={styles.phoneText}>8 (861) 202-58-40</p>
-                                </div>
-                                <div className={styles.socialNetworksContainer}>
-                                    <a className={styles.socialNetworkLink}>
-                                        <WhatsappSvg className={styles.socialNetworkIconSvg}/>
-                                        <p className={styles.socialNetworkLinkText}>WhatsApp</p>
-                                    </a>
-                                    <a className={styles.socialNetworkLink}>
-                                        <TelegramSvg className={styles.socialNetworkIconSvg}/>
-                                        <p className={styles.socialNetworkLinkText}>Telegram</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <h4 className={styles.infoAddressesTitle}>Адреса в г. Краснодаре</h4>
-                            <div className={styles.addressesContainer}>
-                                <p className={styles.addressText}>ул. Дорожная, 1Е (Яблоновский)</p>
-                                <p className={styles.addressText}>ул. Сормовская, 2а</p>
-                                <p className={styles.addressText}>ул. Красных Партизан, 237</p>
-                                <p className={styles.addressText}>ул. Российская, 131/5</p>
-                            </div>
-                        </div>
-
-                        <div className={styles.gridElemInfo}>
-                            <h4 className={styles.infoTitle}>Скачайте наше приложение</h4>
-                            <div className={styles.gridLinks}>
-                                <img className={styles.qrCodePng} src={QrCodePng}/>
-                                <a className={styles.link}>
-                                    <AppleSvg className={styles.shopSvg}/>
-                                </a>
-                                <a className={styles.link}>
-                                    <GoogleSvg className={styles.shopSvg}/>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className={styles.socialNetworksContainer}>
-                            <VKontakteSvg/>
-                            <YouTubeSvg/>
-                            <TikTokSvg/>
-                        </div>
-
-                        <div className={styles.footerFormContainer}>
-                            <h3 className={styles.footerFormTitle}>Узнавай о скидках первым</h3>
-                            <form className={styles.footerForm}>
-                                <input className={styles.emailInput} type={"email"} pattern={"/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/"} placeholder={"Введите свой email"}/>
-                                <button className={styles.subscriptButton}>
-                                    <p className={styles.subscriptButtonText}>Подписаться</p>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <footer className={styles.footerSecond}>
-                <div className={styles.footerSecondWrapper}>
-                    <p className={styles.footerCopyRight}>© 2022</p>
-                    <p className={styles.footerCopyRight}>Сеть магазинов "Байк Центр" ® — bike-сentre.ru</p>
-                </div>
-            </footer>
-        </>
+            <Footer/>
+        </div>
     )
 }
 
