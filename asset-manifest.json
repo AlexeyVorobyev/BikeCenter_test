@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/BikeCenter_test/static/css/main.a1788d18.css",
-    "main.js": "/BikeCenter_test/static/js/main.5f8aa279.js",
+    "main.css": "/BikeCenter_test/static/css/main.76a6109e.css",
+    "main.js": "/BikeCenter_test/static/js/main.9a04f066.js",
     "static/media/gears.svg": "/BikeCenter_test/static/media/gears.fe52c583e1e3bd0a9034dffe218f9d67.svg",
     "static/media/car.png": "/BikeCenter_test/static/media/car.bad7a66a4ee89e4fe9bc.png",
     "static/media/boxes.png": "/BikeCenter_test/static/media/boxes.3c8b52013598b5abd5e9.png",
@@ -25,13 +25,13 @@
     "static/media/comparison.svg": "/BikeCenter_test/static/media/comparison.2f1e0c7db011f7091f884d8e74b01598.svg",
     "static/media/headerSecondInputButtonIcon.svg": "/BikeCenter_test/static/media/headerSecondInputButtonIcon.e9f11907916b355f43e95dd0e21b0d92.svg",
     "static/media/headerCityIcon.svg": "/BikeCenter_test/static/media/headerCityIcon.e357d2249300a13c98e810af4f7e0aa1.svg",
-    "static/media/arrow.svg": "/BikeCenter_test/static/media/arrow.30c643090140c9a3f73a3dfe806893b9.svg",
+    "static/media/arrow.svg": "/BikeCenter_test/static/media/arrow.25d81fc93ef960ca36cfcdb908003852.svg",
     "static/media/headerSecondButtonIcon.svg": "/BikeCenter_test/static/media/headerSecondButtonIcon.78b236a2673bd0e84bd2cfdab074a1c1.svg",
-    "main.a1788d18.css.map": "/BikeCenter_test/static/css/main.a1788d18.css.map",
-    "main.5f8aa279.js.map": "/BikeCenter_test/static/js/main.5f8aa279.js.map"
+    "main.76a6109e.css.map": "/BikeCenter_test/static/css/main.76a6109e.css.map",
+    "main.9a04f066.js.map": "/BikeCenter_test/static/js/main.9a04f066.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1788d18.css",
-    "static/js/main.5f8aa279.js"
+    "static/css/main.76a6109e.css",
+    "static/js/main.9a04f066.js"
   ]
 }
