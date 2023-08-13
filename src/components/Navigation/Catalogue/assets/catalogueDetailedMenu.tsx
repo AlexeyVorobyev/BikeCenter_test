@@ -1,4 +1,3 @@
-
 export interface CatalogueDetailedMenuSubItem {
     id:number
     name:string

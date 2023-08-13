@@ -37,7 +37,7 @@ const Catalogue = ({isHideCatalogue} : {isHideCatalogue:boolean}) => {
                     <div className={styles.itemImageContainer}/>
                 </div>
                 <div className={styles.subItemsContainer}>
-                    {item.subItems.map((item:CatalogueDetailedMenuSubItem) => <p className={styles.subItem}>{item.name}</p>)}
+                    {item.subItems.map((item:CatalogueDetailedMenuSubItem) => <p className={styles.subItem} key={item.id}>{item.name}</p>)}
                 </div>
             </div>
         )

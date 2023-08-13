@@ -162,6 +162,11 @@
             align-items: center;
             gap:7px;
 
+            .headerSecondSearchButtonSvg {
+              width: 20px;
+              height: 20px;
+            }
+
             .headerSecondSearchButtonText {
               color: #FFF;
               font-size: 14px;

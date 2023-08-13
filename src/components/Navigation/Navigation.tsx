@@ -3,6 +3,7 @@ import styles from "./style.module.scss";
 import {ReactComponent as HeaderCityIconSvg} from './assets/headerCityIcon.svg';
 import {ReactComponent as HeaderLogo} from './assets/logo.svg';
 import {ReactComponent as HeaderSecondButtonIconSvg} from './assets/headerSecondButtonIcon.svg';
+import {ReactComponent as HeaderSecondButtonCloseIconSvg} from './assets/headerSecondButtonCloseIcon.svg';
 import {ReactComponent as HeaderSecondInputButtonIconSvg} from './assets/headerSecondInputButtonIcon.svg';
 import {ReactComponent as OrdersSvg} from './assets/headerSecondNavIcons/orders.svg';
 import {ReactComponent as ComparisonSvg} from './assets/headerSecondNavIcons/comparison.svg';
@@ -104,7 +105,8 @@ const Navigation = () => {
                                         else document.body.style.overflowY = "hidden";
                                     }}
                                 >
-                                    <HeaderSecondButtonIconSvg className={styles.headerSecondSearchButtonSvg}/>
+                                    {!isHideCatalogue && <HeaderSecondButtonCloseIconSvg className={styles.headerSecondSearchButtonSvg}/>}
+                                    {isHideCatalogue && <HeaderSecondButtonIconSvg className={styles.headerSecondSearchButtonSvg}/>}
                                     <p className={styles.headerSecondSearchButtonText}>Каталог</p>
                                 </button>
                                 <div className={styles.headerSecondSearch}>

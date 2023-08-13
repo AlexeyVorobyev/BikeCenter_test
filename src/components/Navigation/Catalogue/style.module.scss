@@ -61,6 +61,10 @@ $maxCatalogueHeight : 70vh;
             font-style: normal;
             font-weight: 700;
             line-height: 20px;
+
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
 
@@ -70,11 +74,19 @@ $maxCatalogueHeight : 70vh;
           flex-direction: column;
           gap:10px;
 
+          .subItem:hover {
+            color: #EA5455;
+          }
+
           .subItem {
             color: #333;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
+
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }
@@ -138,11 +150,16 @@ $maxCatalogueHeight : 70vh;
         background: #F2F3F5;
       }
 
+      .catalogueMenuItem:last-child {
+        border: none;
+      }
+
       .catalogueMenuItem {
         display: flex;
         padding: 7px 20px 7px 4px;
         align-items: center;
         border-radius: 5px;
+        border-bottom: 1px solid #F5F5F5;
 
         &:hover {
           cursor: pointer;
