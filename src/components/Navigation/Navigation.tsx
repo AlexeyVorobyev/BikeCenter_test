@@ -10,6 +10,10 @@ import {ReactComponent as ComparisonSvg} from './assets/headerSecondNavIcons/com
 import {ReactComponent as FavoritesSvg} from './assets/headerSecondNavIcons/favorites.svg';
 import {ReactComponent as ShoppingCartSvg} from './assets/headerSecondNavIcons/shoppingCart.svg';
 import {ReactComponent as PersonSvg} from './assets/headerSecondNavIcons/person.svg';
+import {ReactComponent as HeaderMobileLogo} from './assets/headerMobile/logo.svg';
+import {ReactComponent as MobileShoppingCartSvg} from './assets/headerMobile/shopcart.svg';
+import {ReactComponent as MobileSearchIconSvg} from './assets/headerMobile/lupa.svg';
+import {ReactComponent as MobileBurgerSvg} from './assets/headerMobile/burger.svg';
 import {NavLink, Outlet} from "react-router-dom";
 import classNames from "classnames";
 import {Footer} from "./Footer/Footer";
@@ -217,6 +221,26 @@ const Navigation = () => {
                                     className={({ isActive }) =>
                                         (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
                                 >Бренды</NavLink>
+                            </nav>
+                        </div>
+                        <div className={styles.headerMobileContainer}>
+                            <MobileBurgerSvg className={styles.headerMobileBurger}/>
+                            <HeaderMobileLogo className={styles.headerMobileLogo}/>
+                            <nav className={styles.headerMobileNavContainer}>
+                                <NavLink
+                                    to={"someRoute"}
+                                    className={({ isActive }) =>
+                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                >
+                                    <MobileSearchIconSvg className={styles.headerSecondNavLinkIconSvg}/>
+                                </NavLink>
+                                <NavLink
+                                    to={"someRoute"}
+                                    className={({ isActive }) =>
+                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                >
+                                    <MobileShoppingCartSvg className={styles.headerSecondNavLinkIconSvg}/>
+                                </NavLink>
                             </nav>
                         </div>
                     </div>

@@ -17,7 +17,6 @@ const Footer = () => {
             <footer className={styles.footer}>
                 <div className={styles.footerWrapper}>
                     <div className={styles.footerGrid}>
-
                         <div className={styles.gridElemInfo}>
                             <h3 className={styles.infoTitle}>Помощь</h3>
                             <nav className={styles.questionsContainer}>

@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import {ReactComponent as GearsSvg} from './assets/gears.svg';
 import {ReactComponent as ElectricitySvg} from './assets/electricity.svg';
 import {ReactComponent as ArrowSvg} from './assets/arrow.svg';
+import {ReactComponent as ArrowMobileSvg} from './assets/arrowMobile.svg';
 import moneyPng from './assets/money.png';
 import ruporPng from './assets/electricityAdditions/rupor.png';
 import coin1Png from './assets/electricityAdditions/coin1.png';
@@ -190,6 +191,145 @@ const Help = () => {
             <div className={styles.helpContainer}>
                 <h4 className={styles.helpContainerTitle}>Не нашли то что нужно?</h4>
                 <p className={styles.helpContainerText}>Позвоните нам по номеру <span>8 (800) 000000000</span></p>
+            </div>
+
+            <div className={styles.helpFlexMobile}>
+                <div className={styles.helpFlexElem}>
+                    <h3 className={styles.helpFlexElemTitle}>Мы всегда рады помочь</h3>
+                    <p className={styles.helpFlexElemParagraph}>Если у вас есть нерешенный вопрос</p>
+                    <NavLink
+                        to={"someRoute"}
+                        className={({ isActive }) =>
+                            (classNames(styles.helpNavLink, isActive ? styles.active : styles.disActive))}
+                    >
+                        <button className={styles.helpFlexElemButton}>
+                            <p className={styles.helpFlexElemButtonText}>Напишите нам в чат</p>
+                        </button>
+                    </NavLink>
+                </div>
+
+                <div className={styles.helpFlexElem}>
+                    <h3 className={styles.helpFlexElemTitle}>Доставка</h3>
+                    <div className={styles.helpFlexElemInfoWrapper}>
+                        <img className={styles.carPng} src={carPng}/>
+                        <p className={styles.helpFlexElemParagraph}>Стоимость доставки будет зависеть от города в котором вы находитесь</p>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.helpNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <button className={styles.helpFlexElemButton}>
+                                <p className={styles.helpFlexElemButtonText}>Узнать подробнее</p>
+                            </button>
+                        </NavLink>
+                    </div>
+                </div>
+
+                <div className={styles.helpFlexElem}>
+                    <h3 className={styles.helpFlexElemTitle}>Бонусная система</h3>
+                    <ul className={styles.helpFlexElemList}>
+                        <li className={styles.helpFlexElemListElem}>Покупай</li>
+                        <li className={styles.helpFlexElemListElem}>Управляй заказами</li>
+                        <li className={styles.helpFlexElemListElem}>Накапливай cashback—бонусы</li>
+                    </ul>
+                </div>
+
+                <div className={styles.helpFlexElem}>
+                    <h3 className={styles.helpFlexElemTitle}>Оплата</h3>
+                    <div className={styles.helpFlexElemLinksContainer}>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.helpNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.helpNavLinkText}>Как оплатить заказ</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.helpNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.helpNavLinkText}>Наложенный платёж</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.helpNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.helpNavLinkText}>Оплата электронными деньгами</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.helpNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.helpNavLinkText}>Как оплатить если нет карты?</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.helpNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.helpNavLinkText}>Подарочные карты</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                    </div>
+                </div>
+
+                <div className={styles.helpFlexElem}>
+                    <h3 className={styles.helpFlexElemTitle}>Как сделать заказ</h3>
+                    <p className={styles.helpFlexElemParagraph}>Мы делаем все возможное, чтобы максимально облегчить вам оформление заказа. Для того, чтобы сделать это:</p>
+                    <ul className={styles.helpFlexElemList}>
+                        <li className={styles.helpFlexElemListElem}>Перейдите в раздел «Каталог»;</li>
+                        <li className={styles.helpFlexElemListElem}>под понравившимся вам товаром нажать на зеленую кнопку «Купить»: это отправляет ваш заказ в виртуальную корзину;</li>
+                        <li className={styles.helpFlexElemListElem}>переходите в корзину и оформляете заказ;</li>
+                        <li className={styles.helpFlexElemListElem}>система автоматически зарегистрирует вас;</li>
+                        <li className={styles.helpFlexElemListElem}>ожидайте смс и email уведомления о статусе вашего заказа. При возникновении вопросов будем рады помочь по телефону 8(800)500-03-20.</li>
+                    </ul>
+                </div>
+
+                <div className={styles.helpFlexElem}>
+                    <h3 className={styles.helpFlexElemTitle}>Легкий возврат</h3>
+                    <div className={styles.helpFlexElemInfoWrapper}>
+                        <img className={styles.boxesPng} src={boxesPng}/>
+                        <p className={styles.helpFlexElemParagraph}>Мы в «Байк Центре» понимаем это, и с радостью сделаем вам обмен на понравившийся вам товар или вернём деньги.</p>
+                        <ul className={styles.helpFlexElemList}>
+                            <li className={styles.helpFlexElemListElem}>Свяжитесь с нами по телефону или онлайн-чаты. Мы оформим вам бланк возврата и вышлем его вам на электронную почту;</li>
+                            <li className={styles.helpFlexElemListElem}>распечатайте и заполните бланк, его нужно будет сдать вместе с заказом на указанном нами пункте выдачи ;</li>
+                            <li className={styles.helpFlexElemListElem}>надёжно упакуйте товар в коробку, предотвращая трение изделий между собой и свободное перемещение товара внутри упаковки;</li>
+                            <li className={styles.helpFlexElemListElem}>сдайте заказ в том же месте, где получали его или другом удобном вам партнёрском пункте выдачи заказов или магазине;</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className={styles.helpFlexElem}>
+                    <h3 className={styles.helpFlexElemTitle}>Гарантия</h3>
+                    <p className={styles.helpFlexElemParagraph}>Информацию по всем вопросам, связанным с обменом, возвратом, ремонтом и взаимодействием с сервисным центром, вы можете уточнить непосредственно у сотрудников магазина или по телефону горячей линии.</p>
+                    <NavLink
+                        to={"someRoute"}
+                        className={({ isActive }) =>
+                            (classNames(styles.helpNavLink, isActive ? styles.active : styles.disActive))}
+                    >
+                        <button className={styles.helpFlexElemButton}>
+                            <p className={styles.helpFlexElemButtonText}>Гарантийные талоны</p>
+                            <ArrowSvg className={styles.arrowSvg}/>
+                        </button>
+                    </NavLink>
+            </div>
+
+                <div className={styles.helpFlexElem}>
+                    <h3 className={styles.helpFlexElemTitle}>Обратная связь</h3>
+                    <p className={styles.helpFlexElemParagraph}>Если у вас есть предложения или замечания по работе интернет-магазина «Байк Центр», то вы всегда можете обратиться к нам:</p>
+                    <ul className={styles.helpFlexElemList}>
+                        <li className={styles.helpFlexElemListElem}>в социальной сети ВКонтакте;</li>
+                        <li className={styles.helpFlexElemListElem}>по электронной почте руководителю интернет-магазина info@bike-centre.ru;</li>
+                        <li className={styles.helpFlexElemListElem}>написав отзыв о работе «Байк Центра».</li>
+                    </ul>
+                </div>
             </div>
         </>
     )
