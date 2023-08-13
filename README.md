@@ -1,3 +1,5 @@
+Развернутый сайт: https://alexeyvorobyev.github.io/BikeCenter_test/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
