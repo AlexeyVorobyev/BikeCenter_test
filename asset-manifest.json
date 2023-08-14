@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/BikeCenter_test/static/css/main.7ce1ef90.css",
-    "main.js": "/BikeCenter_test/static/js/main.5b38bf6c.js",
+    "main.css": "/BikeCenter_test/static/css/main.1f634d82.css",
+    "main.js": "/BikeCenter_test/static/js/main.b63c5178.js",
     "static/media/gears.svg": "/BikeCenter_test/static/media/gears.fe52c583e1e3bd0a9034dffe218f9d67.svg",
     "static/media/car.png": "/BikeCenter_test/static/media/car.bad7a66a4ee89e4fe9bc.png",
     "static/media/boxes.png": "/BikeCenter_test/static/media/boxes.3c8b52013598b5abd5e9.png",
@@ -27,6 +27,7 @@
     "static/media/telegram.svg": "/BikeCenter_test/static/media/telegram.1b691b3ccc6b87ce5d591d396f472c3c.svg",
     "index.html": "/BikeCenter_test/index.html",
     "static/media/person.svg": "/BikeCenter_test/static/media/person.efc842dc0bb36d00cad8cf499843f9de.svg",
+    "static/media/user.svg": "/BikeCenter_test/static/media/user.1cad430b3c49c42d5364bb188bef9bf1.svg",
     "static/media/electricity.svg": "/BikeCenter_test/static/media/electricity.b30fabbce791af2d6f7639b42c7b6085.svg",
     "static/media/lupaSearch.svg": "/BikeCenter_test/static/media/lupaSearch.d59808b1be0c171e1f3b550ddee5cf23.svg",
     "static/media/comparison.svg": "/BikeCenter_test/static/media/comparison.2f1e0c7db011f7091f884d8e74b01598.svg",
@@ -36,13 +37,15 @@
     "static/media/burger.svg": "/BikeCenter_test/static/media/burger.3a3ed786a9f4a44c9ceeb0cbd636d880.svg",
     "static/media/arrow.svg": "/BikeCenter_test/static/media/arrow.25d81fc93ef960ca36cfcdb908003852.svg",
     "static/media/arrowForm.svg": "/BikeCenter_test/static/media/arrowForm.6c84d264014d388b195ef1a12b25204b.svg",
+    "static/media/close.svg": "/BikeCenter_test/static/media/close.c2cf7ba1fa6d3b8be9f0f3f61dd7f0ec.svg",
+    "static/media/nav.svg": "/BikeCenter_test/static/media/nav.2db0899e20f37ed0a5622a3a9ed02d76.svg",
     "static/media/headerSecondButtonIcon.svg": "/BikeCenter_test/static/media/headerSecondButtonIcon.78b236a2673bd0e84bd2cfdab074a1c1.svg",
     "static/media/arrowMobile.svg": "/BikeCenter_test/static/media/arrowMobile.768b00d71560b4c73e860af7a5ede052.svg",
-    "main.7ce1ef90.css.map": "/BikeCenter_test/static/css/main.7ce1ef90.css.map",
-    "main.5b38bf6c.js.map": "/BikeCenter_test/static/js/main.5b38bf6c.js.map"
+    "main.1f634d82.css.map": "/BikeCenter_test/static/css/main.1f634d82.css.map",
+    "main.b63c5178.js.map": "/BikeCenter_test/static/js/main.b63c5178.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ce1ef90.css",
-    "static/js/main.5b38bf6c.js"
+    "static/css/main.1f634d82.css",
+    "static/js/main.b63c5178.js"
   ]
 }
