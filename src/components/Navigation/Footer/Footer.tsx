@@ -9,7 +9,14 @@ import {ReactComponent as VKontakteSvg} from './assets/socialNetworksIcons/vkont
 import {ReactComponent as YouTubeSvg} from './assets/socialNetworksIcons/youtube.svg';
 import {ReactComponent as TikTokSvg} from './assets/socialNetworksIcons/tiktok.svg';
 import {ReactComponent as GoogleSvg} from './assets/toDownload/google.svg';
+import {ReactComponent as GoogleMobSvg} from './assets/toDownload/googlemob.svg';
 import {ReactComponent as AppleSvg} from './assets/toDownload/apple.svg';
+import {ReactComponent as ArrowMobileSvg} from './assets/mobileFooterIcons/arrowMobile.svg';
+import {ReactComponent as HouseSvg} from './assets/mobileFooterIcons/house.svg';
+import {ReactComponent as PathSvg} from './assets/mobileFooterIcons/path.svg';
+import {ReactComponent as RoubleSvg} from './assets/mobileFooterIcons/rouble.svg';
+import {ReactComponent as StarSvg} from './assets/mobileFooterIcons/star.svg';
+import {ReactComponent as ArrowFormMobileSvg} from './assets/mobileFooterIcons/arrowForm.svg';
 
 const Footer = () => {
     return (
@@ -142,6 +149,155 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
+
+            <footer className={styles.mobileFooter}>
+                <div className={styles.downloadsContainer}>
+                    <h4 className={styles.downloadTitle}>Скачайте наше приложение</h4>
+                    <div className={styles.downloadLinks}>
+                        <a className={styles.link}>
+                            <AppleSvg />
+                        </a>
+                        <a className={styles.link}>
+                            <GoogleMobSvg />
+                        </a>
+                    </div>
+                </div>
+                <div className={styles.mobileFooterWrapper}>
+                    <div className={styles.contactsContainer}>
+                        <a className={styles.contactsAddress}>г. Краснодар, ул. Дорожная, 1Е (Яблоновский) и еще 3</a>
+                        <p className={styles.contactsParagraph}>С 9:00 до 20:00 без выходных</p>
+                        <div className={styles.socialNetworksContainer}>
+                            <a className={styles.socialNetworkLink}>
+                                <WhatsappSvg className={styles.socialNetworkIconSvg}/>
+                                <p className={styles.socialNetworkLinkText}>Написать в WhatsApp</p>
+                                <ArrowMobileSvg className={styles.arrowMobile}/>
+                            </a>
+                            <a className={styles.socialNetworkLink}>
+                                <TelegramSvg className={styles.socialNetworkIconSvg}/>
+                                <p className={styles.socialNetworkLinkText}>Написать в Telegram</p>
+                                <ArrowMobileSvg className={styles.arrowMobile}/>
+                            </a>
+                        </div>
+                        <button className={styles.contactsButton}>
+                            <p className={styles.contactsButtonText}>Позвонить 8 (800) 500-03-20</p>
+                        </button>
+                    </div>
+
+                    <div className={styles.helpContainer}>
+                        <h4 className={styles.helpTitle}>Помощь</h4>
+                        <nav className={styles.helpNavContainer}>
+                            <NavLink
+                                to={"someRoute"}
+                                className={({ isActive }) =>
+                                    (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                            >
+                                <RoubleSvg className={styles.socialNetworkIconSvg}/>
+                                <p className={styles.socialNetworkLinkText}>Оплата</p>
+                                <ArrowMobileSvg className={styles.arrowMobile}/>
+                            </NavLink>
+                            <NavLink
+                                to={"someRoute"}
+                                className={({ isActive }) =>
+                                    (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                            >
+                                <PathSvg className={styles.socialNetworkIconSvg}/>
+                                <p className={styles.socialNetworkLinkText}>Оплата</p>
+                                <ArrowMobileSvg className={styles.arrowMobile}/>
+                            </NavLink>
+                            <NavLink
+                                to={"someRoute"}
+                                className={({ isActive }) =>
+                                    (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                            >
+                                <HouseSvg className={styles.socialNetworkIconSvg}/>
+                                <p className={styles.socialNetworkLinkText}>Оплата</p>
+                                <ArrowMobileSvg className={styles.arrowMobile}/>
+                            </NavLink>
+                            <NavLink
+                                to={"someRoute"}
+                                className={({ isActive }) =>
+                                    (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                            >
+                                <StarSvg className={styles.socialNetworkIconSvg}/>
+                                <p className={styles.socialNetworkLinkText}>Оплата</p>
+                                <ArrowMobileSvg className={styles.arrowMobile}/>
+                            </NavLink>
+                        </nav>
+                    </div>
+                    <div className={styles.stroke}/>
+
+                    <nav className={styles.helpNavContainer}>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.socialNetworkLinkText}>Ремонт и обслуживание</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.socialNetworkLinkText}>Прокат оборудывания</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.socialNetworkLinkText}>О нас</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.socialNetworkLinkText}>Вакансии</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.socialNetworkLinkText}>Пользовательское соглашение</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.socialNetworkLinkText}>Бонусная программа</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                        <NavLink
+                            to={"someRoute"}
+                            className={({ isActive }) =>
+                                (classNames(styles.footerNavLink, isActive ? styles.active : styles.disActive))}
+                        >
+                            <p className={styles.socialNetworkLinkText}>Арендодателям</p>
+                            <ArrowMobileSvg className={styles.arrowMobile}/>
+                        </NavLink>
+                    </nav>
+
+                    <div className={styles.footerFormContainer}>
+                        <h3 className={styles.footerFormTitle}>Подпишитесь на наши новости</h3>
+                        <form className={styles.footerForm}>
+                            <input className={styles.emailInput} type={"email"} pattern={"/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/"} placeholder={"Введите свой email"}/>
+                            <button className={styles.subscriptButton}>
+                                <ArrowFormMobileSvg className={styles.arrowMobile}/>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </footer>
+
             <footer className={styles.footerSecond}>
                 <div className={styles.footerSecondWrapper}>
                     <p className={styles.footerCopyRight}>© 2022</p>
