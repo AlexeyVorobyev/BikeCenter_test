@@ -1,0 +1,120 @@
+$maxMobileMenuHeight : 70vh;
+
+.mobileMenuHidden {
+  opacity: 0.75;
+  max-height: 0;
+  visibility: hidden;
+}
+
+.mobileMenuShow {
+  opacity: 1;
+  max-height: 100vh;
+  visibility: visible;
+}
+
+.mobileMenu {
+  background: #FFFFFF;
+  position: absolute;
+  top:134px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.08);
+  width: 100%;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 20px 0 20px;
+
+  .catalogueMenu {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y:scroll;
+    padding-right: 20px;
+    max-height: 60vh;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      background-color: #E0E0E0;
+    }
+
+    /* ползунок скроллбара */
+    &::-webkit-scrollbar-thumb {
+      background-color: #999;
+      border-radius: 9em;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: white;
+    }
+
+    .catalogueMenuItem {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+
+      .itemArrowSvg {
+        margin-left: auto;
+      }
+
+      .itemTitleService {
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .itemTitleItem {
+        color: #333;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .activeTitleItem {
+        color: #EA5455;
+      }
+
+      .itemTitle {
+        font-style: normal;
+        line-height: 20px;
+        margin-left:20px;
+        max-width:200px;
+      }
+
+      .itemImageContainer {
+        width: 40px;
+        height: 40px;
+        border-radius: 7px;
+        background: #F2F3F5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .itemImage {
+          width: 35px;
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  .selector {
+    padding: 4px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    border-radius: 20px;
+    background: #F2F3F5;
+
+    .selectButton {
+      border-radius: 15px;
+      height: 33px;
+      width: 50%;
+    }
+
+    .active {
+      background: #FFF;
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
+    }
+  }
+}

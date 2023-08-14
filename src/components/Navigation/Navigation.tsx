@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import styles from "./style.module.scss";
 import {ReactComponent as HeaderCityIconSvg} from './assets/headerCityIcon.svg';
 import {ReactComponent as HeaderLogo} from './assets/logo.svg';
@@ -13,17 +13,37 @@ import {ReactComponent as PersonSvg} from './assets/headerSecondNavIcons/person.
 import {ReactComponent as HeaderMobileLogo} from './assets/headerMobile/logo.svg';
 import {ReactComponent as MobileShoppingCartSvg} from './assets/headerMobile/shopcart.svg';
 import {ReactComponent as MobileSearchIconSvg} from './assets/headerMobile/lupa.svg';
+import {ReactComponent as MobileUserIconSvg} from './assets/headerMobile/user.svg';
 import {ReactComponent as MobileBurgerSvg} from './assets/headerMobile/burger.svg';
+import {ReactComponent as HeaderBurgerCloseSvg} from './assets/headerMobile/close.svg';
+import {ReactComponent as CityNavSvg} from './assets/headerMobile/nav.svg';
 import {NavLink, Outlet} from "react-router-dom";
 import classNames from "classnames";
 import {Footer} from "./Footer/Footer";
 import {SearchDropDown} from "./SearchDropDown/SearchDropDown";
 import {Catalogue} from "./Catalogue/Catalogue";
+import {MobileMenu} from "./MobileMenu/MobileMenu";
 
 const Navigation = () => {
 
     const [isHideCatalogue,setHideCatalogue] = React.useState(true);
+    const [isHideMobileMenu,setHideMobileMenu] = React.useState(true);
     const [isHideSearch,setHideSearch] = React.useState(true);
+
+
+    useEffect(() => {
+        const handleResize = (event:any) => {
+            const width = event.target.innerWidth;
+            if (width <= 800) {
+                setHideCatalogue(true);
+                setHideSearch(true);
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div>
@@ -224,24 +244,55 @@ const Navigation = () => {
                             </nav>
                         </div>
                         <div className={styles.headerMobileContainer}>
-                            <MobileBurgerSvg className={styles.headerMobileBurger}/>
-                            <HeaderMobileLogo className={styles.headerMobileLogo}/>
-                            <nav className={styles.headerMobileNavContainer}>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                            <div className={styles.headerMobileFirstWrapper}>
+                                <button
+                                    className={styles.headerMobileBurger}
+                                    onClick={() => {
+                                        setHideMobileMenu(!isHideMobileMenu)
+                                        if (document.body.style.overflowY === "hidden") {
+                                            document.body.style.overflowY = "visible";
+                                        }
+                                        else document.body.style.overflowY = "hidden";
+                                    }}
                                 >
-                                    <MobileSearchIconSvg className={styles.headerSecondNavLinkIconSvg}/>
-                                </NavLink>
-                                <NavLink
-                                    to={"someRoute"}
-                                    className={({ isActive }) =>
-                                        (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
-                                >
-                                    <MobileShoppingCartSvg className={styles.headerSecondNavLinkIconSvg}/>
-                                </NavLink>
-                            </nav>
+                                    {isHideMobileMenu && <MobileBurgerSvg className={styles.headerMobileBurgerIcon}/>}
+                                    {!isHideMobileMenu && <HeaderBurgerCloseSvg className={styles.headerMobileBurgerIcon}/>}
+                                </button>
+                                <HeaderMobileLogo className={styles.headerMobileLogo}/>
+                                <nav className={styles.headerMobileNavContainer}>
+                                    <NavLink
+                                        to={"someRoute"}
+                                        className={({ isActive }) =>
+                                            (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                    >
+                                        <MobileSearchIconSvg className={styles.headerSecondNavLinkIconSvg}/>
+                                    </NavLink>
+                                    <NavLink
+                                        to={"someRoute"}
+                                        className={({ isActive }) =>
+                                            (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                    >
+                                        <MobileShoppingCartSvg className={styles.headerSecondNavLinkIconSvg}/>
+                                    </NavLink>
+                                    <NavLink
+                                        to={"someRoute"}
+                                        className={({ isActive }) =>
+                                            (classNames(styles.headerNavLink, isActive ? styles.active : styles.disActive))}
+                                    >
+                                        <MobileUserIconSvg className={styles.headerSecondNavLinkIconSvg}/>
+                                    </NavLink>
+                                </nav>
+                            </div>
+                            <div className={styles.headerMobileSecondWrapper}>
+                                <p className={styles.paragraph}>Ваш город</p>
+                                <div className={styles.city}>
+                                    <CityNavSvg/>
+                                    <p className={styles.cityText}>Краснодар</p>
+                                </div>
+                            </div>
+
+                            <MobileMenu isHideMobileMenu={isHideMobileMenu}/>
+
                         </div>
                     </div>
                 </div>
@@ -249,6 +300,7 @@ const Navigation = () => {
                 <Catalogue isHideCatalogue={isHideCatalogue}/>
 
             </header>
+
 
             <main className={styles.main}>
                 <div className={styles.mainWrapper}>
