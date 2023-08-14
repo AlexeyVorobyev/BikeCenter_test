@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BikeCenter_test/static/css/main.1f634d82.css",
-    "main.js": "/BikeCenter_test/static/js/main.b63c5178.js",
+    "main.js": "/BikeCenter_test/static/js/main.bba2ce53.js",
     "static/media/gears.svg": "/BikeCenter_test/static/media/gears.fe52c583e1e3bd0a9034dffe218f9d67.svg",
     "static/media/car.png": "/BikeCenter_test/static/media/car.bad7a66a4ee89e4fe9bc.png",
     "static/media/boxes.png": "/BikeCenter_test/static/media/boxes.3c8b52013598b5abd5e9.png",
@@ -42,10 +42,10 @@
     "static/media/headerSecondButtonIcon.svg": "/BikeCenter_test/static/media/headerSecondButtonIcon.78b236a2673bd0e84bd2cfdab074a1c1.svg",
     "static/media/arrowMobile.svg": "/BikeCenter_test/static/media/arrowMobile.768b00d71560b4c73e860af7a5ede052.svg",
     "main.1f634d82.css.map": "/BikeCenter_test/static/css/main.1f634d82.css.map",
-    "main.b63c5178.js.map": "/BikeCenter_test/static/js/main.b63c5178.js.map"
+    "main.bba2ce53.js.map": "/BikeCenter_test/static/js/main.bba2ce53.js.map"
   },
   "entrypoints": [
     "static/css/main.1f634d82.css",
-    "static/js/main.b63c5178.js"
+    "static/js/main.bba2ce53.js"
   ]
 }
