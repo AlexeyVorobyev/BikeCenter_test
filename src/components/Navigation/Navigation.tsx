@@ -37,6 +37,7 @@ const Navigation = () => {
             if (width <= 800) {
                 setHideCatalogue(true);
                 setHideSearch(true);
+                document.body.style.overflowY = "visible";
             }
         };
         window.addEventListener('resize', handleResize);
